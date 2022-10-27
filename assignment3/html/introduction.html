@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> Introduction</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(49, 62, 75);
+        }
+        
+        .a{
+            position: relative;
+            top: 70px;
+            width: 1200px;
+            height: 600px;
+            background-image: url("../images/2.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow:hidden;
+        }
+        .b,
+        .c,
+        .d,
+        .e{
+            position: absolute;
+            width: 1000px;
+            height: 600px;
+            /* set shadow */
+            filter: drop-shadow(4px 4px 12px rgba(57, 65, 97, 0.5));
+            background-size: cover;
+            opacity: .7;
+            transition: 1.5s;
+        }
+        /* Move the mouse, the picture is separated to move the animation to both sides */
+        .b::after,
+        .c::after,
+        .d::after,
+        .e::after{
+            content: "";
+            position: absolute;
+            width: 1000px;
+            height: 600px;
+            background-image: url("../images/2.jpg");
+        }
+        .b{
+            left: -300px;
+            transform: rotate(100deg);
+            overflow: hidden;
+        }
+        .b::after{
+            transform: rotateZ(-100deg);
+        }
+
+        .c{
+            left: -300px;
+            transform: rotateZ(-100deg);
+            overflow: hidden;
+        }
+        .c::after{
+            transform: rotateZ(100deg);
+        }
+
+        .d{
+            right: -300px;
+            transform: rotateZ(105deg);
+            overflow: hidden;
+        }
+        .d::after{
+            transform: rotateZ(-105deg);
+        }
+
+        .e{
+            right: -300px;
+            transform: rotateZ(-100deg);
+            overflow: hidden;
+        }
+        .e::after{
+            transform: rotateZ(100deg);
+        }
+        .f{
+            opacity: 0;
+            /* font: 900 50px ''; */
+            /* Set font spacing */
+            /* letter-spacing: 10px; */
+            color: rgb(62, 64, 71);
+            transition: 2s;
+            color: #45565d
+        }
+
+        /* Move the mouse, the font will show animation after the two sides of the picture are separated */
+        .a:hover .b{
+            left: -500px;
+        }
+        .a:hover .c{
+            left: -550px;
+        }
+        .a:hover .d{
+            right: -500px;
+        }
+        .a:hover .e{
+            right: -560px;
+        }
+        .a:hover .f{
+            opacity: 1;
+            z-index: 99;
+        }
+/* return font size */
+		.g{
+			text-decoration: none;
+            float: right;
+            font-size: 1.4rem;
+		}
+/* return font color */
+		.g:visited{
+			color: #132025;
+		}
+
+
+        .content{
+            margin-top: -20px;
+            width: 500px;
+            font-size: 0.7rem;
+        }
+        .in3{
+            color: #eff2f4;
+        }
+    </style>
+</head>
+<body>
+  <!-- Introduction -->
+    <div class="a">
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f content" >
+            <h1>MetaMoon Music Festival Tickets</h1>
+            <div class="inTitleDiv">
+                <h2 class="inTitle">Music Festival Tickets</h2>
+                <p class="inContent">There's nothing in the world better than sipping on a cold one, soaking up the sun while listening to your favorite musical artists belt out tunes. If you are a fan of live music, then you understand the draw of music festivals. Music festivals are all about living in that moment, where nothing else matters but the music, the bands and the camaraderie that comes along with it all. And if you're a fan the concert experience, it's always a good time to snag a few music festival tickets. Fortunately, StubHub has you covered for all the major music festivals, including Coachella, Lollapalooza, Bonnaroo and many more.</p>
+            </div>
+            <div class="inTitleDiv">
+                <h2 class="inTitle">Music Festival Experience</h2>
+                <p class="inContent">If you've never been to an amazing music festival, there has never been a better time to change that. Did you know the world's largest music festival is the Donauinselfest which is held for three days annually in Vienna? Annually this music festival draws between 2,500,000 and 3,000,000 fans. Other historical music festivals include the Woodstock Festival, which attracted nearly 500,000 attendees, and the Polish spin-off Przystanek Woodstock charmed 700,000 in 2011. And the oldest pop music festival on the planet is Pinkpop Festival from the Netherlands, although other genres are older - the Three Choirs Festival has run yearly since 1719. </p>
+            </div>
+            <div class="inTitleDiv in3">
+                <h2 class="inTitle">Music Festivals</h2>
+                <p class="inContent">Commonly held outdoors, music festivals often include other attractions like food, merchandise, social activities and performance art, making it much more than just a concert experience. For instance, the world-famous Bonnaroo festival features several distinct activities for attendees, making for an unforgettable experience for music lovers each and every year. Make sure you check out all of the music festival tickets StubHub has and get ready for a great festival that you'll be talking about well after it's over.</p>
+            </div>
+			<a class="g" href="../index.html">Back</a>
+		</div>
+    </div>
+    
+</body>
+
+</html>
